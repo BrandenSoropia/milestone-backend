@@ -5,3 +5,7 @@ A dump of things I found useful while working on this. (Note to future self, don
 ## DB stuff
 
 [MongoDB naming conventions](https://stackoverflow.com/questions/5916080/what-are-naming-conventions-for-mongodb)
+
+## Node Stuff
+
+[Sharing one DB connection through app: Node magic!](https://stackoverflow.com/a/24634454)

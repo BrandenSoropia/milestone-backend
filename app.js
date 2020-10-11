@@ -1,39 +1,16 @@
-var createError = require("http-errors");
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
+const createError = require("http-errors");
+const express = require("express");
+const path = require("path");
+const cookieParser = require("cookie-parser");
+const logger = require("morgan");
 
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
-const MongoClient = require("mongodb").MongoClient;
-const assert = require("assert");
+const indexRouter = require("./routes/index");
+const usersRouter = require("./routes/users");
+const mongoUtil = require("./db/mongoUtil");
 
-var app = express();
+const app = express();
 
-// Connection URL
-const url = "mongodb://localhost:27017";
-
-// Database Name
-const dbName = "msDevDB";
-
-// Create a new MongoClient
-const client = new MongoClient(url, { useUnifiedTopology: true });
-
-// Use connect method to connect to the Server
-client.connect(function (err) {
-  assert.strictEqual(null, err);
-  console.log(
-    "Connected successfully to MongoDB, current database: " +
-      dbName +
-      ".\nServer running on: " +
-      url
-  );
-
-  const db = client.db(dbName);
-
-  client.close();
-});
+mongoUtil.connectToDB();
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
