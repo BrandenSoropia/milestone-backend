@@ -21,8 +21,12 @@ For now, I'm going to be using the following naming convention for this project'
 
 ### Setup and Look Around the DB
 
-I'm using a Mongo Compass to look view/edit my DB's. [You can get it here](https://docs.mongodb.com/compass/master/install).
+I'm using a Mongo Compass to look view/edit my DB's. [You can get it here](https://docs.mongodb.com/compass/master/install). [For visuals for the below steps, you can take a look here](https://www.mongodb.com/basics/create-database#creating-with-compass)
 
-Start up the MongoDB server running (with `yarn dev`). Then open Compass and connect to it by pasting this url `mongodb://localhost:27017`.
+1. Start up the MongoDB server running (with `yarn dev`).
+1. Then open Compass and connect to it by pasting this url `mongodb://localhost:27017`.
+1. Create a new database by pressing the "Create Database" button on the top left corner of Compass.
+   1. Name it to `msDevDB`,
+   1. For the required collection name, use `milestones`.
 
-Finally, create a new database by pressing the "Create Database" button on the top left corner of Compass. Name it to `msDevDB`, then for the required collection name, use `milestones`. You should be all setup now!
+Your DB should be all setup now for dev!
