@@ -1,16 +1,19 @@
 const mongoUtils = require("./mongoUtil");
-
 const MILESTONES = "milestones";
 
 async function create(data) {
   try {
-    // TODO: Figure out why this isn't working.
-    const doc = await mongoUtils.getDB().collection(MILESTONES).insertOne(data);
-    console.log("### doc", doc);
+    const _data = data;
 
-    return doc;
+    const result = await mongoUtils
+      .getDB()
+      .collection(MILESTONES)
+      .insertOne(_data);
+
+    return result.ops[0];
   } catch (error) {
     console.log("### This error happened in createMilestone", error);
+    throw error;
   }
 }
 
