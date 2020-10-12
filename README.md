@@ -30,3 +30,11 @@ I'm using a Mongo Compass to look view/edit my DB's. [You can get it here](https
    1. For the required collection name, use `milestones`.
 
 Your DB should be all setup now for dev!
+
+> If the `msDevDB` only contains an empty collection, nothing might show up when viewing in Compass when you reopen it. This is normal behavior. It will show up once you have at least one document.
+
+## API Stuff
+
+I'm using Postman to play around with endpoints. You can look at my local collection here.
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/e18675b2bafae3b5e536)
